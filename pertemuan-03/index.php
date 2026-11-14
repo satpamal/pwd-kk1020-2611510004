@@ -1,17 +1,32 @@
+<?php
+# ini untuk penulisan variabel
+$nama = "Muhamad Surya Mentari Jingga";
+// ini untuk penulisan konstanta
+const phi = 3.14;
+/*
+  true atau false = tipe data boolean
+  null = tanpa isi (ketiadaan)
+  123 = tipe data angka (int)
+  "teks" = tipe data string
+  3.14 = tipe data decimal
+*/
+$paras = TRUE;
+?>
+
 <!doctype html>
 <html lang="id">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profil Mahasiswa</title>
+  <title>Profil <?php echo $nama ?></title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header>
     <div class="header-top">
-      <h1>Profil Mahasiswa</h1>
+      <h1>Profil <?php echo $nama ?></h1>
 
       <button
         class="nav-toggle"
@@ -37,8 +52,8 @@
     <section id="home">
       <h2>Selamat Datang</h2>
       <p>
-        Halo, saya Nama Mahasiswa. Saya sedang mempelajari Pemrograman Web
-        Dasar.
+        Halo, saya <?= $nama ?>. Saya sedang mempelajari Pemrograman Web
+        Dasar dengan <?= phi ?>.
       </p>
 
       <img src="img/foto-profil.jpg" alt="Foto profil Nama Mahasiswa" />
