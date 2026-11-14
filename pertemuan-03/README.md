@@ -1,2 +1,6 @@
-# pwd-kk1020-2611510004
-Repositori Pemrograman Web Dasar milik Dhea Safira
+# pertemuan-03
+
+pada pertemuan ke 3, saya mengembangkan:
+
+1. menyalin artefak pertemuan-02, sebagai baseline pertemuan-03
+2.
