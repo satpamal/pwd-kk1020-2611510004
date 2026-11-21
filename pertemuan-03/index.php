@@ -1,6 +1,9 @@
 <?php
+
+$nama = $_POST["nama"];
+
 # ini untuk penulisan variabel
-$nama = "Muhamad Surya Mentari Jingga";
+#$nama = "Muhamad Surya Mentari Jingga";
 // ini untuk penulisan konstanta
 const phi = 3.14;
 /*
@@ -11,7 +14,8 @@ const phi = 3.14;
   3.14 = tipe data decimal
 */
 $paras = false;
-$semester = 2;
+$semester = "2";
+$target = 8;
 
 switch ($semester) {
   case 1:
@@ -39,6 +43,10 @@ switch ($semester) {
     $pacarku = "lom ade";
     break;
 }
+
+for ($i = 1; $i <= 5; $i++):
+  echo $i . "<br>";
+endfor;
 ?>
 
 <!doctype html>
@@ -98,8 +106,13 @@ switch ($semester) {
           echo "<p>Saya berwajah tampan (calon perwira).</p>";
         endif;
         ?>
-        <p>Semester <?php echo $semester ?> (<?= $semesterku ?>). Pacarku <?= $pacarku ?></p>
+        <p>Semester <?php echo $semester ?> (<?= $semesterku ?>). Yayangku <?= $pacarku ?></p>
 
+        <?php
+        for ($i = 1; $i <= $target; $i++):
+          echo "<p>Semester $i ($semesterku). Yayangku $pacarku</p>";
+        endfor;
+        ?>
         <h3>Target Belajar</h3>
 
         <ol>
@@ -110,6 +123,8 @@ switch ($semester) {
       </article>
     </section>
 
+
+
     <section id="contact">
       <h2>Kontak</h2>
 
@@ -118,7 +133,119 @@ switch ($semester) {
         <a href="https://github.com/username">profil GitHub saya</a>.
       </p>
 
-      <form id="contactForm" action="index.html" method="get" novalidate>
+      <form id="contactForm" action="index.php" method="post" novalidate>
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label><br />
+
+          <input
+            class="input-form"
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Masukkan nama lengkap"
+            minlength="3"
+            maxlength="50"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label><br />
+
+          <input
+            class="input-form"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="nama@email.com"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="semester">Semester</label><br />
+
+          <input
+            class="input-form"
+            type="number"
+            id="semester"
+            name="semester"
+            min="1"
+            max="14"
+            required />
+        </div>
+
+        <div class="form-group">
+          <label for="tanggal">Tanggal Kunjungan</label><br />
+
+          <input
+            class="input-form"
+            type="date"
+            id="tanggal"
+            name="tanggal"
+            required />
+        </div>
+
+        <div class="form-group">
+          <p>Jenis Pesan</p>
+
+          <input
+            type="radio"
+            id="pertanyaan"
+            name="jenis_pesan"
+            value="pertanyaan"
+            required />
+          <label for="pertanyaan">Pertanyaan</label>
+
+          <input type="radio" id="saran" name="jenis_pesan" value="saran" />
+          <label for="saran">Saran</label>
+        </div>
+
+        <div class="form-group">
+          <p>Topik yang Diminati</p>
+
+          <input type="checkbox" id="minat-html" name="minat" value="HTML" />
+          <label for="minat-html">HTML</label>
+
+          <input type="checkbox" id="minat-css" name="minat" value="CSS" />
+          <label for="minat-css">CSS</label>
+        </div>
+
+        <div class="form-group">
+          <label for="prodi">Program Studi</label><br />
+
+          <select class="input-form" id="prodi" name="prodi" required>
+            <option value="">-- Pilih Program Studi --</option>
+            <option value="SI">Sistem Informasi</option>
+            <option value="TI">Teknik Informatika</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pesan">Pesan</label><br />
+
+          <textarea
+            class="input-form"
+            id="pesan"
+            name="pesan"
+            maxlength="300"
+            placeholder="Tulis pesan Anda"
+            required></textarea>
+        </div>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+        <p id="formFeedback"></p>
+      </form>
+    </section>
+
+    <section id="sekenek">
+      <h2>Rencana Kegiatan</h2>
+
+      <p>
+        Kunjungi
+        <a href="https://github.com/username">profil GitHub saya</a>.
+      </p>
+
+      <form id="contactForm" action="index.php" method="post" novalidate>
         <div class="form-group">
           <label for="nama">Nama Lengkap</label><br />
 
