@@ -7,4 +7,4 @@ pada pertemuan-04, yang saya lakukan adalah:
 3. membuat tabel dengan nama tbl_kontak_2611510004
 4. mengisi record untuk tabel tbl_kontak_2611510004 baik menggunakan UI maupun SQL insert into
 5. membuat koneksi.php
-6.
+6. membuat skrip baca data dari tabel kontak untuk ditampilkan ke index.php

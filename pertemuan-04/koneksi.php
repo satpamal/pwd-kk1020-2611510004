@@ -2,7 +2,7 @@
 // P11: Berkas koneksi PHP-MySQL menggunakan MySQLi (dapat digunakan kembali).
 // Sejak PHP 8.1, MySQLi默认 melempar exception saat galat.
 // Dimatikan agar kegagalan dapat diperiksa secara prosedural.
-mysqli_report(MYSQLI_REPORT_OFF);
+//mysqli_report(MYSQLI_REPORT_OFF);
 
 // Konfigurasi basis data (default Laragon, sesuaikan bila berbeda).
 $hostAL = "localhost";
